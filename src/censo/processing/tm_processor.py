@@ -695,7 +695,7 @@ class TmProc(QmProc):
                     else config.paths.cosmorssetup.replace("TZVP", "TZVPD_FINE")
                 )
             lines = [
-                f"ctd = {setup} cdir = {(Path(config.paths.cosmotherm).parent / '..' / 'CTDATA-FILES').resolve()}\n",
+                f"ctd = {setup} cdir = {(Path(config.paths.cosmotherm).parent / '..' / 'CTDATA-FILES').resolve()} ldir = {(Path(config.paths.cosmotherm).parent / '..' / '..' / 'licensefiles/').resolve()}\n",
                 "EFILE VPFILE\n",
                 "!!\n",
             ]
